@@ -1,0 +1,2 @@
+# generator-goroskope
+server-generator
