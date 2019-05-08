@@ -1,3 +1,4 @@
+import os
 from bottle import route, run, response
 from horoscope import generate_prophecies
 
