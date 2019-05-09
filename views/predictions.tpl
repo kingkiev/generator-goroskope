@@ -6,47 +6,23 @@
 	/>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-	<script src="scripts.js"></script>
-
 	</head>
 	<body>
 		<div class="container">
-			<h1 id="click_on_header">Ваши предсказания на {{ date }}</h1>
+			<h1 id="main-header-1">Ваши предсказания на {{ date }}</h1>
 
-			% if special_date:
-      		<h2>Сегодня супер особенный день!</h2>
-      		% end
-
-      		% for pred in predictions:
-      		<p>{{ pred }}</p>
-      		% end
-
-			<div class="row">
-  				<div class="col" id="p-0">
-  					<p>1</p>
-  				</div>
-  				<div class="col" id="p-1">
-  					<p>2</p>
-  				</div>
-  				<div class="col" id="p-2">
-  					<p>3</p>
-  				</div>
-  			</div>
-  			<div class="row">
-  				<div class="col" id="p-3">
-  					<p>4</p>
-  				</div>
-  				<div class="col" id="p-4">
-  					<p>5</p>
-  				</div>
-  				<div class="col" id="p-5">
-  					<p>6</p>
-  				</div>
-			</div>
-
-			<p><hr /></p>
-			<p><a href="about.html">О реализации</p>
+      <div class="row">
+        <div class="col" id="p-0"></div>
+        <div class="col" id="p-1"></div>
+        <div class="col" id="p-2"></div>
+      </div>
+      <div class="row">
+        <div class="col" id="p-3"></div>
+        <div class="col" id="p-4"></div>
+        <div class="col" id="p-5"></div>
+      </div>
 		</div>
+  <script src="/static/js/scripts.js"></script>
 	</body>
 	
 </html>

@@ -1,11 +1,19 @@
 import os
-from bottle import route, run, response
+from bottle import route, run, response, static_file, view
 from horoscope import generate_prophecies
+from datetime import datetime as dt
 
 
 @route("/")
+@view("predictions")
 def index():
-    return "<h1>Success!</h1>"
+	date_now = 25
+	return {"date": dt.now().date(),
+	       "predictions": generate_prophecies(total_num=6, num_sentences=2)}
+
+@route('/static/js/<filename>')
+def send_static(filename):
+    return static_file(filename, root='static/js/')
 
 
 @route("/api/forecasts")
