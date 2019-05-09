@@ -3,6 +3,11 @@ from bottle import route, run, response
 from horoscope import generate_prophecies
 
 
+@route("/")
+def index():
+    return "<h1>Success!</h1>"
+
+
 @route("/api/forecasts")
 def forecast():
     response.headers['Access-Control-Allow-Origin'] = '*'
